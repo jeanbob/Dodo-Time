@@ -1,0 +1,10 @@
+all: dodotime
+
+dodotime: fonctions_calcul.o dodotime.o
+	$(CC) $(CFLAGS) $(LIBS) -o ../bin/$@ $^
+
+fonctions_calcul.o:
+	$(CC) -c $^
+
+dodotime.o:
+	$(CC) -c $(CFLAGS) $(LIBS) $^

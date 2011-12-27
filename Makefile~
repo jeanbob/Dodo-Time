@@ -1,0 +1,24 @@
+
+export CC=gcc
+SRC_DIR=src/
+BIN_DIR=bin/
+export LIBS += $(shell pkg-config --libs libpanelapplet-2.0)
+export CFLAGS += $(shell pkg-config --cflags)
+
+all: dodotime
+
+dodotime: 
+	cd $(SRC_DIR) && $(MAKE)
+
+clean:
+	@echo "Nettoyage des fichiers en cours"
+	rm $(BIN_DIR)*
+	rm $(SRC_DIR)*.o
+	@echo "Nettoyage terminé"
+
+install:
+	@echo "Installation en cours"
+	mv *.png /usr/share/pixmaps/
+	mv *.server /usr/libs/bonobo/servers/
+	mv $(BIN_DIR)dodotime /usr/lib/gnome-panel/
+	@echo "Installation terminé"

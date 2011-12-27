@@ -13,8 +13,8 @@ dodotime:
 
 clean:
 	@echo "Nettoyage des fichiers en cours"
-	rm $(BIN_DIR)*
-	rm $(SRC_DIR)*.o
+	rm $(BIN_DIR)*.o
+	rm $(SRC_DIR)*
 	rmdir bin
 	@echo "Nettoyage terminé"
 

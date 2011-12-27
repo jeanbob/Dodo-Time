@@ -3,6 +3,10 @@ Créé par JeanBoB
 Crée pour illustrer la suite d'article sur la création d'applet gnome
 pour le site http://jeanbob.eu
 
+Dépendance :
+
+libpanelapplet-2.0
+
 Pour l'installation :
 
 make

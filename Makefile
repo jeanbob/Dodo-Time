@@ -8,12 +8,14 @@ export CFLAGS += $(shell pkg-config --cflags libpanelapplet-2.0)
 all: dodotime
 
 dodotime: 
+	mkdir bin
 	cd $(SRC_DIR) && $(MAKE)
 
 clean:
 	@echo "Nettoyage des fichiers en cours"
 	rm $(BIN_DIR)*
 	rm $(SRC_DIR)*.o
+	rmdir bin
 	@echo "Nettoyage terminé"
 
 install:

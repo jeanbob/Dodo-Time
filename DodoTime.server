@@ -1,0 +1,24 @@
+<oaf_info>
+<oaf_server iid="OAFIID:DodoTime_Factory" type="exe"
+location="/usr/lib/gnome-panel/dodo_time">
+<oaf_attribute name="repo_ids" type="stringv">
+<item value="IDL:Bonobo/GenericFactory:1.0"/>
+<item value="IDL:Bonobo/Unknown:1.0"/>
+</oaf_attribute>
+<oaf_attribute name="name" type="string" value="Dodo Time Factory"/>
+<oaf_attribute name="description" type="string" 
+value="Factory to create Dodo Time"/>
+</oaf_server>
+<oaf_server iid="OAFIID:DodoTime" type="factory"
+location="OAFIID:DodoTime_Factory">
+<oaf_attribute name="repo_ids" type="stringv">
+<item value="IDL:GNOME/Vertigo/PanelAppletShell:1.0"/>
+<item value="IDL:Bonobo/Control:1.0"/>
+<item value="IDL:Bonobo/Unknown:1.0"/>
+</oaf_attribute>
+<oaf_attribute name="name" type="string" value="Dodo Time"/>
+<oaf_attribute name="description" type="string" value="Applet Dodo Time permettant de connaitre les meilleures heures pour votre réveil ou d'afficher un compte à rebours indiquant l'heure à laquelle il faut aller dormir"/>
+<oaf_attribute name="panel:category" type="string" value="Amusements"/>
+<oaf_attribute name="panel:icon" type="string" value="dodotime.png"/>
+</oaf_server>
+</oaf_info>
